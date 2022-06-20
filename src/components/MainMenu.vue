@@ -12,7 +12,7 @@ const menu = ref([
   },
   {
     logo: true,
-    routeName: 'main',
+    routeName: '',
   },
   {
     label: '4',

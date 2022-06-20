@@ -1,12 +1,18 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
+import { ViteSSG } from 'vite-ssg'
+import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
-import router from './router'
+import generatedRoutes from '~pages'
 
-const app = createApp(App)
+import './styles/main.sass'
 
-app.use(createPinia())
-app.use(router)
+const routes = setupLayouts(generatedRoutes)
 
-app.mount('#app')
+// https://github.com/antfu/vite-ssg
+export const createApp = ViteSSG(
+  App,
+  { routes, base: import.meta.env.BASE_URL },
+  (ctx) => {
+    // install all modules under `modules/`
+    Object.values(import.meta.globEager('./modules/*.ts')).forEach(i => i.install?.(ctx))
+  },
+)
