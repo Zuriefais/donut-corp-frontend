@@ -3,6 +3,7 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
 import generatedRoutes from '~pages'
 
+import './styles/element-plus-theme.sass'
 import './styles/main.sass'
 
 const routes = setupLayouts(generatedRoutes)

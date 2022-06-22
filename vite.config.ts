@@ -22,6 +22,14 @@ export default defineConfig({
     },
   },
 
+  css: {
+    preprocessorOptions: {
+      sass: {
+        additionalData: '@import "@/styles/vars.sass"\n',
+      },
+    },
+  },
+
   plugins: [
     Vue({
       include: [/\.vue$/, /\.md$/],

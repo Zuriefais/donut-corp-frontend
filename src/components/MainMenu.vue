@@ -12,7 +12,7 @@ const menu = ref([
   },
   {
     logo: true,
-    routeName: '',
+    routeName: 'index',
   },
   {
     label: '4',
@@ -53,19 +53,19 @@ const menu = ref([
 </template>
 
 <style lang="sass">
-  .main-menu
-    margin: 0 0 0 0
-    position: fixed
-    top: 0px
-    display: flex
-    align-items: center
-    justify-content: space-evenly
-    width: 750px
-    background-color: rgba(33, 35, 49, 0.5)
-    backdrop-filter: blur(5px)
-    &__item-link
-      color: white
-      text-decoration: none
-      &--active
-        color: red
+.main-menu
+  margin: 0 0 0 0
+  position: fixed
+  top: 0px
+  display: flex
+  align-items: center
+  justify-content: space-evenly
+  width: 750px
+  background-color: rgba(33, 35, 49, 0.5)
+  backdrop-filter: blur(5px)
+  &__item-link
+    color: white
+    text-decoration: none
+    &--active
+      color: red
 </style>

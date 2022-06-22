@@ -3,7 +3,7 @@
   "packageManager": "pnpm@7.1.6",
   "scripts": {
     "build": "vite-ssg build",
-    "dev": "vite --port 25565 --open --host",
+    "dev": "vite --port 25565 --host",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
@@ -15,14 +15,15 @@
   "dependencies": {
     "@vueuse/core": "^8.6.0",
     "@vueuse/head": "^0.7.6",
+    "element-plus": "^2.2.6",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "prism-theme-vars": "^0.2.3",
+    "socket.io-client": "^4.5.1",
     "vue": "^3.2.37",
     "vue-demi": "^0.13.1",
     "vue-i18n": "^9.1.10",
-    "vue-router": "^4.0.16",
-    "socket.io-client": "^4.5.1"
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
